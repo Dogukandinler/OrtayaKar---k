@@ -1,0 +1,9 @@
+.star {
+  color: gainsboro;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.star:hover {
+  color: yellow;
+}

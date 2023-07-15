@@ -1,0 +1,186 @@
+.testimonials-container {
+  background: #000;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.testimonials-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.testimonials-box {
+  width: 500px;
+  box-shadow: 2px 2px 30px rba(0, 0, 0, 0.1);
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.profile-image img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.name-username {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-username strong {
+  color: rgb(2, 248, 56);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.name-username small {
+  color: #ddd;
+  font-size: 10px;
+}
+
+.reviews {
+  color: gold;
+}
+
+.box-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clienst-comments {
+  display: inline-block;
+  font-size: 13px;
+  padding: 10px;
+  color: #ddd;
+  text-align: center;
+  position: relative;
+}
+
+/*?-----------------Mobile Responsive-----------------*/
+@media (max-width: 768px) {
+  .testimonials-box {
+    width: 350px;
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 50px;
+  }
+
+  .name-username strong {
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .name-username small {
+    font-size: 8px;
+  }
+
+  .clienst-comments p {
+    font-size: 10px;
+  }
+
+  .reviews {
+    font-size: 12px;
+  }
+}
+
+.rating {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+.rating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rating label:last-child {
+  position: static;
+}
+
+.rating label:nth-child(1) {
+  z-index: 5;
+}
+
+.rating label:nth-child(2) {
+  z-index: 4;
+}
+
+.rating label:nth-child(3) {
+  z-index: 3;
+}
+
+.rating label:nth-child(4) {
+  z-index: 2;
+}
+
+.rating label:nth-child(5) {
+  z-index: 1;
+}
+
+.rating label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating label .icon {
+  float: left;
+  color: transparent;
+}
+
+.rating label:last-child .icon {
+  color: #000;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+  color: #09f;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+  color: #000;
+  text-shadow: 0 0 5px #09f;
+}
+
+.comment-date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0.25rem;
+  color: gray;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
